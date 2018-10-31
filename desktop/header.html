@@ -1,0 +1,28 @@
+<script type="text/discourse-plugin" version="0.8.18">
+api.reopenWidget("timeline-controls", {
+  html(attrs) {
+    const controls = [];
+    const { fullScreen, currentUser, topic } = attrs;
+
+    if (!fullScreen && currentUser && currentUser.get("canManageTopic")) {
+      controls.push(this.attach("topic-admin-menu-button", { topic }));
+    }
+    if (!fullScreen && currentUser) {
+      controls.push(
+        this.attach("button", {
+          className: "btn btn-default print-button",
+          icon: "print",
+          title: "topic.print.help",
+          action: "printTopic"
+        })
+      );
+    }
+
+    return controls;
+  },
+
+  printTopic() {
+    api.container.lookup("controller:topic").print();
+  }
+});
+</script>
