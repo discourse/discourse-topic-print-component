@@ -1,0 +1,29 @@
+@import "common/foundation/variables";
+
+.print-branding {
+  display: none;
+  @media print {
+    display: block;
+    padding: 1em 0;
+    border-bottom: 1px solid $primary-low;
+    margin-bottom: 1em;
+    #print-branding-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .print-branding-logo {
+      margin-left: auto;
+      max-height: 30px;
+      width: auto;
+    }
+    .print-branding-title {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+
+      .print-branding-url {
+        font-weight: normal;
+      }
+    }
+  }
+}
