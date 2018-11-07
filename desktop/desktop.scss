@@ -1,0 +1,18 @@
+@import "common/foundation/variables";
+
+@media print {
+  header {
+    position: static !important;
+    display: flex !important;
+    box-shadow: none !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid $primary-low !important;
+    a {
+      margin-left: auto !important;
+      img {
+        max-width: unset !important;
+        max-height: 33px !important;
+      }
+    }
+  }
+}
