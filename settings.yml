@@ -1,0 +1,5 @@
+print_icons: 
+  type: 'list'
+  list_type: 'compact'
+  default: 'fa-print'
+  hidden: true
