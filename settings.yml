@@ -1,2 +1,2 @@
-print_icon: 
-  default: 'fa-print'
+print_icon:
+  default: 'print'
