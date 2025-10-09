@@ -1,6 +1,6 @@
 import Component from "@glimmer/component";
-import { getOwner } from "@ember/application";
 import { action } from "@ember/object";
+import { getOwner } from "@ember/owner";
 import { and, not } from "truth-helpers";
 import DButton from "discourse/components/d-button";
 
