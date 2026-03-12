@@ -1,8 +1,8 @@
 import Component from "@glimmer/component";
 import { action } from "@ember/object";
 import { getOwner } from "@ember/owner";
-import { and, not } from "truth-helpers";
 import DButton from "discourse/components/d-button";
+import { and, not } from "discourse/truth-helpers";
 
 export default class PrintTopicButton extends Component {
   @action
